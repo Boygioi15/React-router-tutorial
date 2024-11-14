@@ -1,8 +1,26 @@
-# React + Vite
+# React router tutorial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## The project structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ - main.jsx: Entry point of app and define route
+ - index.css: (Not important) Css for whole web
+ - errorPage.jsx: Error page
+ - contacts.js: Interact with data
+ - routes( folder): Hold component
+	 - routes/root: Main layout. There is an **outlet** in root. 
+	 - routes/edit: Edit component
+	 - routes/contact: Contatct component
+	 - routes/destroy: Just make API call. 
+
+## Importances!
+ - Nested routes in main + Outlet in root -> Nested layout.
+ - Root path contains:
+	 - element: Root layout
+	 - errorElement: What to show when there is error
+	 - loader: A "convenience" when using react router this way( similar to context), Helps to load data
+	 - action: Capture submit action( There is form in root)
+	 - children: Nested path. Each path's element is a component => When "go" to the URL. We have Root Layout + Component. 
+	 - Just click on the New button and see. 
+
+
